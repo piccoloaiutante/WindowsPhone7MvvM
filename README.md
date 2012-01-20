@@ -1,4 +1,4 @@
-Model-View-ViewModel Example
+Model-View-ViewModel for Windows Phone 7
 =============
 
 This is a ready to use project that shows an implementation of the pattern Model-View-ViewModel for Windows Phone 7. It also shows how to use Funq a DI Container for Windows Phone 7.
