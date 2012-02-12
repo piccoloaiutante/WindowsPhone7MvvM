@@ -11,6 +11,13 @@ namespace MvvmExample.Infrastrucutre
                 return App.Container.Resolve<MainViewModel>();
             }
         }
+        public  DetailViewModel DetailViewModel
+        {
+            get
+            {
+                return App.Container.Resolve<DetailViewModel>();
+            }
+        }
 
     }
 }
