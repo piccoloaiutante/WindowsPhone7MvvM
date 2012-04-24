@@ -30,10 +30,26 @@
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <Button Command="{Binding OpenDetailCommand}">Open detail</Button>
+            <StackPanel>
+                <ScrollViewer>
+                    <ItemsControl Name="Posts" ItemsSource="{Binding Posts}">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel  Margin="0,0,0,15">
+                                    <TextBlock Text="{Binding Path=Title}" />
+                                    <TextBlock TextWrapping="Wrap" Text="{Binding Path=Description}" />
+                                    <TextBlock Text="{Binding Path=PubDate}" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </ScrollViewer>
+                <Button Command="{Binding OpenDetailCommand}">Open detail</Button>
+            </StackPanel>
         </Grid>
     </Grid>
- 
+
+
     <!--Sample code showing usage of ApplicationBar-->
     <!--<phone:PhoneApplicationPage.ApplicationBar>
         <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
